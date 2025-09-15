@@ -1,5 +1,12 @@
 function findStudentById(students, id) {
   // Your code here
+  for (let i = 0;i < students.length; i++) {
+    if (id === students[i].id) {
+      return { id: students[i].id, name: students[i].name }
+    }else {
+      return null
+    }
+  }
 }
 
 // Test case
@@ -11,5 +18,7 @@ const students = [
   { id: 403, name: "Sophia Martinez" },
 ];
 
+
 console.log(findStudentById(students, 302)); // Output: { id: 302, name: "Emily Carter" }
 console.log(findStudentById(students, 4)); // Output: null
+
