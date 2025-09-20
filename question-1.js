@@ -3,10 +3,9 @@ function findStudentById(students, id) {
   for (let i = 0;i < students.length; i++) {
     if (id === students[i].id) {
       return { id: students[i].id, name: students[i].name }
-    }else {
-      return null
     }
   }
+  return null
 }
 
 // Test case
